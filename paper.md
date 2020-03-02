@@ -9,14 +9,10 @@ tags:
 authors:
   - name: Dirk B. Auman
     orcid: 0000-0001-8764-958X
-    affiliation: "1, 2" # (Multiple affiliations must be quoted)
-  - name: Author Without ORCID
-    affiliation: 2
+    affiliation: "1" # (Multiple affiliations must be quoted)
 affiliations:
  - name: Ville Kaila, Professor and Chair of Biochemistry, Stockholm University
    index: 1
- - name: Institution 2
-   index: 2
 date: 20 March 2020
 bibliography: paper.bib
 
@@ -37,23 +33,6 @@ QmmmScript represents one such "in-house" solution for enabling qmmm calculation
 Included is a detailed tutorial with line-by-line instructions of how to go from an intial pdb structure to a final qmmm trajectory, with two fully worked-out examples. The first, the "minimal working example", models the side chain of a single buried cystein residue in CipA, a small soluble protein. The second, a "real-world example" from ongoing research in our group, treats several protein residues and water molecules at the quantum level to model the protein transfer reaction of the membrane-bound Nqo13 subunit of T. thermophilus complex I.
 
 We intend QmmmScript to be an educational resource and a practical scientific tool for both new students and existing researchers.
-
-# Mathematics
-
-Single dollars ($) are required for inline mathematics e.g. $f(x) = e^{\pi/x}$
-
-Double dollars make self-standing equations:
-
-$$\Theta(x) = \left\{\begin{array}{l}
-0\textrm{ if } x < 0\cr
-1\textrm{ else}
-\end{array}\right.$$
-
-You can also use plain \LaTeX for equations
-\begin{equation}\label{eq:fourier}
-\hat f(\omega) = \int_{-\infty}^{\infty} f(x) e^{i\omega x} dx
-\end{equation}
-and refer to \autoref{eq:fourier} from text.
 
 # Citations
 
