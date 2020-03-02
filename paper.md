@@ -15,7 +15,6 @@ authors:
 affiliations:
  - name: Ville Kaila, Professor and Chair of Biochemistry, Stockholm University
    index: 1
-
 date: 20 March 2020
 bibliography: paper.bib
 ---
