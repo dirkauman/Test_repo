@@ -9,14 +9,10 @@ tags:
 authors:
   - name: Adrian M. Price-Whelan
     orcid: 0000-0003-0872-7098
-    affiliation: "1, 2" # (Multiple affiliations must be quoted)
-  - name: Author Without ORCID
-    affiliation: 2
+    affiliation: "1" # (Multiple affiliations must be quoted)
 affiliations:
  - name: Lyman Spitzer, Jr. Fellow, Princeton University
    index: 1
- - name: Institution 2
-   index: 2
 date: 13 August 2017
 bibliography: paper.bib
 
