@@ -1,23 +1,23 @@
 ---
-title: 'Gala: A Python package for galactic dynamics'
+title: 'QmmmScript: A complete tutorial and adaptable, semi-automated workflow for running hybrid quantum mechanics/molecular mechanics simulations of protein systems with charmm and turbomole'
 tags:
   - Python
-  - astronomy
-  - dynamics
-  - galactic dynamics
-  - milky way
+  - charmm
+  - turbomole
+  - qmmm
+  - molecular simulation
 authors:
-  - name: Adrian M. Price-Whelan
-    orcid: 0000-0003-0872-7098
+  - name: Dirk B. Auman
+    orcid: 0000-0001-8764-958X
     affiliation: "1, 2" # (Multiple affiliations must be quoted)
   - name: Author Without ORCID
     affiliation: 2
 affiliations:
- - name: Lyman Spitzer, Jr. Fellow, Princeton University
+ - name: Ville Kaila, Professor and Chair of Biochemistry, Stockholm University
    index: 1
  - name: Institution 2
    index: 2
-date: 13 August 2017
+date: 20 March 2020
 bibliography: paper.bib
 
 # Optional fields if submitting to a AAS journal too, see this blog post:
@@ -28,35 +28,15 @@ aas-journal: Astrophysical Journal <- The name of the AAS journal.
 
 # Summary
 
-The forces on stars, galaxies, and dark matter under external gravitational
-fields lead to the dynamical evolution of structures in the universe. The orbits
-of these bodies are therefore key to understanding the formation, history, and
-future state of galaxies. The field of "galactic dynamics," which aims to model
-the gravitating components of galaxies to study their structure and evolution,
-is now well-established, commonly taught, and frequently used in astronomy.
-Aside from toy problems and demonstrations, the majority of problems require
-efficient numerical tools, many of which require the same base code (e.g., for
-performing numerical orbit integration).
+Constructing accurate physical models of biomolecular systems often presents a challenge, since many of the important properties of biomolecules arise from the coupling of physical processes across multiple scales of time and space. Choosing a level of theory to apply to a physical system comes down to balancing a trade-off between accuracy and computational cost, and for so-called "multiscale systems", any one level of physical theory alone is either insufficiently accurate or computationally infeasable for treating the phenomena at other relevant scales. Multiscale computational modeling, where mutiple levels of physical theory are applied and integrated, is becoming an increasingly valuable and popular means of investigating the physical and catalytic properties of complex chemical systems, particuarly proteins and protein complexes.
 
-`Gala` is an Astropy-affiliated Python package for galactic dynamics. Python
-enables wrapping low-level languages (e.g., C) for speed without losing
-flexibility or ease-of-use in the user-interface. The API for `Gala` was
-designed to provide a class-based and user-friendly interface to fast (C or
-Cython-optimized) implementations of common operations such as gravitational
-potential and force evaluation, orbit integration, dynamical transformations,
-and chaos indicators for nonlinear dynamics. `Gala` also relies heavily on and
-interfaces well with the implementations of physical units and astronomical
-coordinate systems in the `Astropy` package [@astropy] (`astropy.units` and
-`astropy.coordinates`).
+For molecular modeling, the most common theoretical division separates quantum mechanical models, which use wavefunction methods and include information about electrons, and molecular mechanics (aka molecular dynamics) models, which approximate bonded and non-bonded interactions as a linear combination of classical potentials. Most simulation software suites developed to date accordingly focus on one of the two catagories, with programs like Charmm, Amber, and Gromacs representing molecular dynamics and programs like Turbomole, Gaussian, and MOPAC representing quantum chemistry. In the absence of a standard environment for multiscale modeling across the qm-mm divide, the primary strategy for academic groups running qmmm simulations has been to create custom software that cycles between calling a dedicated mm program and a dedicated qm program, iteratively taking the output coordinates of one program and converting it to input for the other. However, these custom scripts are rarely distributed to the public, and much less so alongside a tutorial and a minimal working example. This presents a significant obstacle to the more widespread adoption of the technique.
 
-`Gala` was designed to be used by both astronomical researchers and by
-students in courses on gravitational dynamics or astronomy. It has already been
-used in a number of scientific publications [@Pearson:2017] and has also been
-used in graduate courses on Galactic dynamics to, e.g., provide interactive
-visualizations of textbook material [@Binney:2008]. The combination of speed,
-design, and support for Astropy functionality in `Gala` will enable exciting
-scientific explorations of forthcoming data releases from the *Gaia* mission
-[@gaia] by students and experts alike.
+QmmmScript represents one such "in-house" solution for enabling qmmm calculations, using charmm for the MM calculations and turbomole for the QM calculations (both popular choices of chemical modeling software in their respective domains). Beyond the core python3 program `shuttle.py` that shuttles coordinate data between charmm and turbomole, QmmmScript includes python and tcl scripts for automatically generating the necessary charmm input and qm-mm boundary/link atom definitions as a stream file, as well as series of template charmm scripts for executing each stage of a typically simulation pipeline. The user need only modify the initial tcl script to define the quantum atoms for their system (using VMD's selection language), and potentially the parameter sections of the geometry optimization and production run scripts if non-default settings are desired (different timestep, convergence criteria, temperature, etc).
+
+Included is a detailed tutorial with line-by-line instructions of how to go from an intial pdb structure to a final qmmm trajectory, with two fully worked-out examples. The first, the "minimal working example", models the side chain of a single buried cystein residue in CipA, a small soluble protein. The second, a "real-world example" from ongoing research in our group, treats several protein residues and water molecules at the quantum level to model the protein transfer reaction of the membrane-bound Nqo13 subunit of T. thermophilus complex I.
+
+We intend QmmmScript to be an educational resource and a practical scientific tool for both new students and existing researchers.
 
 # Mathematics
 
