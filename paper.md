@@ -16,12 +16,6 @@ affiliations:
 date: 20 March 2020
 bibliography: paper.bib
 
-# Optional fields if submitting to a AAS journal too, see this blog post:
-# https://blog.joss.theoj.org/2018/12/a-new-collaboration-with-aas-publishing
-aas-doi: 10.3847/xxxxx <- update this with the DOI from AAS once you know it.
-aas-journal: Astrophysical Journal <- The name of the AAS journal.
----
-
 # Summary
 
 Constructing accurate physical models of biomolecular systems often presents a challenge, since many of the important properties of biomolecules arise from the coupling of physical processes across multiple scales of time and space. Choosing a level of theory to apply to a physical system comes down to balancing a trade-off between accuracy and computational cost, and for so-called "multiscale systems", any one level of physical theory alone is either insufficiently accurate or computationally infeasable for treating the phenomena at other relevant scales. Multiscale computational modeling, where mutiple levels of physical theory are applied and integrated, is becoming an increasingly valuable and popular means of investigating the physical and catalytic properties of complex chemical systems, particuarly proteins and protein complexes.
@@ -36,33 +30,23 @@ We intend QmmmScript to be an educational resource and a practical scientific to
 
 # Citations
 
-Citations to entries in paper.bib should be in
-[rMarkdown](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)
-format.
-
-If you want to cite a software repository URL (e.g. something on GitHub without a preferred
-citation) then you can do it with the example BibTeX entry below for @fidgit.
-
-For a quick reference, the following citation commands can be used:
-- `@author:2001`  ->  "Author et al. (2001)"
-- `[@author:2001]` -> "(Author et al., 2001)"
-- `[@author1:2001; @author2:2001]` -> "(Author1 et al., 2001; Author2 et al., 2002)"
-
 # Figures
 
-Figures can be included like this:
+I might include a snapshot of each active site from the two examples
+<!--
+!Figures can be included like this:
 ![Caption for example figure.\label{fig:example}](figure.png)
-and referenced from text using \autoref{fig:example}.
+!and referenced from text using \autoref{fig:example}.
 
-Fenced code blocks are rendered with syntax highlighting:
-```python
-for n in range(10):
-    yield f(n)
-```	
+!Fenced code blocks are rendered with syntax highlighting:
+!```python
+!for n in range(10):
+!    yield f(n)
+!```	
+-->	
 
 # Acknowledgements
 
-We acknowledge contributions from Brigitta Sipocz, Syrtis Major, and Semyeong
-Oh, and support from Kathryn Johnston during the genesis of this project.
+We acknowledge contributions from Person A, Person B, and Person C (perhaps Christopher Rowley’s group?)
 
 # References
