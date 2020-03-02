@@ -1,19 +1,19 @@
 ---
-title: 'Gala: A Python package for galactic dynamics'
+title: 'QmmmScript: A complete tutorial and adaptable, semi-automated workflow for running hybrid quantum mechanics/molecular mechanics simulations of protein systems with charmm and turbomole'
 tags:
-  - Python
-  - astronomy
-  - dynamics
-  - galactic dynamics
-  - milky way
+  - python
+  - charmm
+  - turbomole
+  - qmmm
+  - molecular simulation
 authors:
-  - name: Adrian M. Price-Whelan
-    orcid: 0000-0003-0872-7098
+  - name: Dirk B. Auman
+    orcid: 0000-0001-8764-958X
     affiliation: "1" # (Multiple affiliations must be quoted)
 affiliations:
- - name: Lyman Spitzer, Jr. Fellow, Princeton University
+ - name: Ville Kaila, Professor and Chair of Biochemistry, Stockholm University
    index: 1
-date: 13 August 2017
+date: 15 March 2020
 bibliography: paper.bib
 ---
 
